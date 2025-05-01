@@ -1,13 +1,11 @@
-name: Hello World
+name: Add Hello World GitHub Action
 
-
-# Trigger this workflow on every push
-on:
-    push:
+on: [push]
 
 jobs:
-  say-hello:
+  hello:
     runs-on: ubuntu-latest
     steps:
-      -name: Print Hello
-      run: echo "Hello, world!  ~@"
+    - uses: actions/checkout@v4
+    - name: Say Hello
+      run: echo "Hello, World!"
